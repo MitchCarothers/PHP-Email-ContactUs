@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    flex-direction: column;
+}
+
+h1 {
+    font: 22px "Merriweather";
+    margin: 0px 0px 0px 0px;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+label {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#header {
+    padding: 17px 25px;
+    box-shadow: 0 4px 6px -6px black;
+    margin-bottom: 10px;
+}
+
+#container {
+    border-radius: 15px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    min-width: 600px;
+}
+
+#nameEmailContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+}
+
+#contactForm {
+    padding: 23px;
+    font: 14px "Noto Sans";
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+#message {
+    padding: 15px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: rgba(128, 128, 128, 0.08);
+    resize: none;
+    height: 100px;
+    width: 95%;
+    font: 14px "Noto Sans";
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.3);
+    transition: .2s box-shadow;
+}
+
+#message:focus {
+    transition: .2s box-shadow;
+    outline: none;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.6);
+}
+
+#nameContainer {
+    width: 230px;
+}
+
+#emailContainer {
+    width: 300px;
+}
+
+#submit {
+    padding: 10px 20px;
+    font: 14px "Merriweather";
+    background-color: transparent;
+    border: none;
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: .2s box-shadow;
+    width: 40%;
+}
+
+#submit:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: .2s box-shadow;
+}
+
+#submit:active {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+    opacity: 90%;
+}
+
+.fieldContainer {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.fieldContainer:focus-within {
+    outline: 2px solid rgba(0, 145, 255);
+    outline-offset: -1px;
+}
+
+.fieldContainer label {
+    padding: 8px 13px 8px 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    margin-right: 8px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.fieldContainer input {
+    border: none;
+    font: 14px "Noto Sans";
+    background-color: transparent;
+    padding-right: 10px;
+    min-width: 30px;
+    width: 100%;
+}
+
+.fieldContainer input:focus {
+    outline: none;
+}
+
+.error {
+    border: 1px solid rgb(255, 98, 98);
+}
+
+.error > label {
+    border-right: 1px solid rgb(255, 98, 98);
+}
+
+.fieldContainer.error:focus-within {
+    outline: 2px solid rgb(255, 41, 41);
+    outline-offset: -1px;
+}
+
+.fieldContainer.error input::placeholder {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+textarea.error {
+    outline: 1px solid rgb(255, 98, 98);
+    outline-offset: 3px;
+}
+
+textarea.error:focus {
+    outline: 1px solid rgb(255, 98, 98) !important;
+    outline-offset: 3px;
+}
+
+textarea.error::placeholder {
+    color: rgba(255, 0, 0, 0.5) !important;
+}
